@@ -8,32 +8,38 @@
   >
     <div class="row g-2">
       <div class="col">
-        <label for="inputEmail4" class="form-label">Title</label>
+        <label class="form-label">Title</label>
         <input
+          required
+          placeholder="max. 30 characters"
           type="text"
           [(ngModel)]="title"
           class="form-control form-control-sm"
           id="title"
           name="title"
+          maxlength="30"
         />
       </div>
     </div>
     <div class="row g-2">
       <div class="col">
-        <label for="inputPassword4" class="form-label">Description</label>
+        <label class="form-label">Description</label>
         <input
+          required
+          placeholder="max. 150 characters"
           type="text"
           [(ngModel)]="desc"
           class="form-control form-control-sm"
           id="desc"
           name="desc"
+          maxlength="150"
         />
       </div>
     </div>
 
     <div class="row g-2">
       <div class="col d-flex flex-row justify-content-center">
-        <button type="submit" class="button">Add Todoo</button>
+        <input type="submit" class="button" value="ADD TODOO" />
       </div>
     </div>
   </form>

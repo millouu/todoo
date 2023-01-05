@@ -1,23 +1,26 @@
 <div class="my-3 todo-card">
   <h6 [ngClass]="{ strike: !todo.active }">{{ todo.title }}</h6>
-  <p style="font-size: small">{{ todo.desc }}</p>
-  <div class="form-check form-switch">
-    <input
-      class="form-check-input"
-      type="checkbox"
-      value=""
-      id="flexCheckDefault"
-      (click)="doneCheck(todo)"
-    />
-    <label
-      class="form-check-label"
-      for="flexCheckDefault"
-      style="font-size: small"
-    >
-      TODOO DONE
-    </label>
-  </div>
-  <div class="d-flex flex-row justify-content-center">
+  <p [ngClass]="{ strike: !todo.active }" style="font-size: small">
+    {{ todo.desc }}
+  </p>
+
+  <div class="d-flex flex-column align-items-center justify-content-center">
+    <div class="form-check form-switch mt-2">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="flexCheckDefault"
+        (click)="doneCheck(todo)"
+      />
+      <label
+        class="form-check-label"
+        for="flexCheckDefault"
+        style="font-size: small; font-weight: 600"
+      >
+        TODOO DONE
+      </label>
+    </div>
     <button class="btn btn-sm button button-delete" (click)="onClick(todo)">
       Delete
     </button>
