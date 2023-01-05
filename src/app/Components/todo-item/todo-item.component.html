@@ -1,7 +1,7 @@
-<div class="my-3">
+<div class="my-3 todo-card">
   <h6 [ngClass]="{ strike: !todo.active }">{{ todo.title }}</h6>
-  <p>{{ todo.desc }}</p>
-  <div class="form-check">
+  <p style="font-size: small">{{ todo.desc }}</p>
+  <div class="form-check form-switch">
     <input
       class="form-check-input"
       type="checkbox"
@@ -9,9 +9,17 @@
       id="flexCheckDefault"
       (click)="doneCheck(todo)"
     />
-    <label class="form-check-label" for="flexCheckDefault">
-      Mark as done
+    <label
+      class="form-check-label"
+      for="flexCheckDefault"
+      style="font-size: small"
+    >
+      TODOO DONE
     </label>
   </div>
-  <button class="btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
+  <div class="d-flex flex-row justify-content-center">
+    <button class="btn btn-sm button button-delete" (click)="onClick(todo)">
+      Delete
+    </button>
+  </div>
 </div>

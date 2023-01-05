@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Todo } from 'src/app/todo';
+import { FormsModule ,FormGroup, NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-add-todo',
@@ -9,9 +10,10 @@ import { Todo } from 'src/app/todo';
 export class AddTodoComponent {
   title: string
   desc: string
-  @Output() addTodo:EventEmitter<Todo>=new EventEmitter()
+  submitted:FormGroup
+  @Output() addTodo: EventEmitter<Todo> = new EventEmitter()
   
-  onSubmit()
+  onSubmit(submitted:NgForm)
   {
     const todo = {
       sno:10,
@@ -20,5 +22,6 @@ export class AddTodoComponent {
       active:true
     }
     this.addTodo.emit(todo)
+    submitted.reset()
   }
 }

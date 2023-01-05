@@ -1,0 +1,26 @@
+.add-to-do {
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 2px 4px 0 #000;
+}
+
+.button {
+  background-color: #f9ea84;
+  font-weight: light;
+  position: relative;
+  float: left;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 0 #000;
+  transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
+}
+
+.button:active {
+  top: 4px;
+  padding-bottom: 0px;
+  box-shadow: 0 1px 0 #000;
+}
